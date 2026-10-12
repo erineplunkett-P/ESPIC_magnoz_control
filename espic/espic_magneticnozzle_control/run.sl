@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=384G
 #SBATCH --time=168:00:00
-#SBATCH --mail-user=jpz5rz@virginia.edu
+#SBATCH --mail-user=sra2ja@virginia.edu
 #SBATCH --mail-type=all
 #SBATCH --partition=standard
 #SBATCH --constraint=afton
@@ -15,7 +15,7 @@
 # Avoid nounset because Intel setvars.sh references unset vars.
 # set -eo pipefail
 
-WORK_HOME=/scratch/jpz5rz/20251230_H_0857_VDF_large_continue
+WORK_HOME=/scratch/sra2ja/20251230_H_0857_VDF_large_continue
 cd $WORK_HOME
 
 module purge
