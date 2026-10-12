@@ -1,0 +1,19 @@
+1280000000    ! MAXNPARTS
+80000000      ! MAXNPARTSINCR
+0.1           ! dt
+200000        ! endstep
+0             ! flag for hybrid simulations: 1 - hybrid, otherwise - full PIC
+323630        ! seed to rand(): use (1) current time if < 0; (2) default if = 0; (3) given value if > 0
+1000          ! ivevalfield -- [if (== 0 || > ivdump): no eval nor dump]
+1000          ! ivdump -- [be multipe of iveval; if (< iveval***): no ***eval nor ***dump files]
+100000000     ! ivdumpPart
+1             ! 1 if read restart file
+10000         ! ivrestart -- ( no restart if 0)
+8 4 1        ! virtual omp threads, vthrd[3]
+0             ! Whether we will have an external E field or not, 1 for have, 0 for not have
+1             ! Whether we will have an external B field or not, 1 for have, 0 for not have
+4             ! Number of external B coil
+-0.5 19.5 0 0.21425 ! Xa, Ya, Za, Bstrength (all at the throat) of the external coil, add more lines like this if you have multiple external coil
+0.5 20.5 0 0.21425 ! Xa, Ya, Za, Bstrength (all at the throat) of the external coil, add more lines like this if you have multiple external coil
+-0.5 20.5 0 0.21425 ! Xa, Ya, Za, Bstrength (all at the throat) of the external coil, add more lines like this if you have multiple external coil
+0.5 19.5 0 0.21425 ! Xa, Ya, Za, Bstrength (all at the throat) of the external coil, add more lines like this if you have multiple external coil

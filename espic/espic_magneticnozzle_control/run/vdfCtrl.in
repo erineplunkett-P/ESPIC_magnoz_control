@@ -1,0 +1,8 @@
+80000    ! step_start: step after which starts sampling
+1         ! nevery_sample: make a sample every this step
+1000     ! nevery_restart
+1000     ! nevery_save: save sampling info to file every this step
+1 0 0 0 100 100 0       ! nblocks, (cxlo, cylo, czlo), (cxhi, cyhi, czhi), ...
+1 x -8 8 0.01       ! spec, v_dir, vmin, vmax, dv
+1 y -8 8 0.01       ! spec, v_dir, vmin, vmax, dv
+1 z -8 8 0.01       ! spec, v_dir, vmin, vmax, dv

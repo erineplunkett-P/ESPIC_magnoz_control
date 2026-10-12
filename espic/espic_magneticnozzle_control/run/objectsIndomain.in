@@ -1,0 +1,4 @@
+1                             ! # of objects inside domain 
+-2.0 0.0 0.0 10.0 0.0 1.0      ! 1st object: rectangle (xmin, xmax, ymin, ymax, zmin, zmax)
+1                            ! 1st object: real object? 0 - virtual, 1 - real
+0.0                           ! 1st object: fixed phi value

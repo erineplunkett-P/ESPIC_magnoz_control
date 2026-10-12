@@ -1,0 +1,6 @@
+80000 ! step_start
+1   ! sample every
+1000  ! restart every
+1000  ! save every
+1  0 0 0  100 100 0    ! block 1
+1  0.0  80.0  0.005 both

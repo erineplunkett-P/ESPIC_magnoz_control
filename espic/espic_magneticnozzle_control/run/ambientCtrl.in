@@ -1,0 +1,7 @@
+89432                           ! seed to rand(): use (1) current time if < 0; (2) default if = 0; (3) given value if > 0
+0.0 200.0 0.0 80.0 0.0 0.0      ! spec 0: domain (x0, x1, y0, y1, z0, z1)
+1.0 1.0 1.0                     ! spec 0: cell size (dx, dy dz)
+400 1.0 1.0 0.1866965 0.0 0.0   ! spec 0: Npart/cell, n, T, (U, V, W)
+0.0 200.0 0.0 80.0 0.0 0.0      ! spec 1: domain (x0, x1, y0, y1, z0, z1)
+1.0 1.0 1.0                     ! spec 1: cell size (dx, dy dz)
+400 1.0 0.01 0.1866965 0.0 0.0  ! spec 1: Npart/cell, n, T, (U, V, W)

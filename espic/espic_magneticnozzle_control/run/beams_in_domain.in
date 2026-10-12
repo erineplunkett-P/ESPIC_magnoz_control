@@ -1,0 +1,11 @@
+2                           ! # of beams
+0.0 5.0 0.0                ! 1st beam: xc[3] = {xc, yc, zc}
+2 5.0                      ! 1st beam: dimension, radius
+1.0 0.0 0.0                 ! 1st beam: normal vector of inj plane
+0.0 1.0 0.0                 ! 1st beam: tagent vec on inj plane (opt for 2D)
+1 1.0 1.0 0.023337048109148478 0.0 0.0 ! 1st beam: [spec_type, n, T, (U, V, W)]
+0.0 5.0 0.0                ! 2nd beam: xc[3] = {xc, yc, zc}
+2 5.0                      ! 2nd beam: dimension, radius
+1.0 0.0 0.0                 ! 2nd beam: normal vector of inj plane
+0.0 1.0 0.0                 ! 2nd beam: tagent vec on inj plane (opt for 2D)
+2 1.0 0.025 0.023337048109148478 0.0 0.0      ! 2nd beam: [spec_type, n, T, (U, V, W)]

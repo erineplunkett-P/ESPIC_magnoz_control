@@ -1,0 +1,55 @@
+CXX ?= g++
+BUILD ?= release
+EIGEN_INCLUDE ?= ./eigen-3.3.9
+BIN ?= ../bin
+
+PROG = espic
+EXEC = $(PROG).x
+TARGET = $(BIN)/$(EXEC)
+GEN_AMBIENT = $(BIN)/gen_ambient.x
+
+INCLUDES = -I$(EIGEN_INCLUDE)
+CXXFLAGS_COMMON = -std=c++11 -fopenmp -pedantic -Wall $(INCLUDES)
+LDLIBS ?= -lm -lstdc++
+
+ifeq ($(BUILD),debug)
+  CXXFLAGS = $(CXXFLAGS_COMMON) -O3 -g -fno-omit-frame-pointer
+else
+  CXXFLAGS = $(CXXFLAGS_COMMON) -O3
+endif
+
+ifeq ($(ASAN),1)
+  CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
+  LDLIBS += -fsanitize=address
+endif
+
+OBJS = es_PIC.o pic_part.o inject_flow_inout.o pic_io.o \
+       solve_field.o setup_matrix_rhs.o update_matrix_rhs.o \
+       eval_hist_vel_field.o eval_azimuthal.o objects_in_domain.o beams_in_domain.o \
+       str_split.o parse.o source.o sample_field.o vdf.o edf.o comp_ellint.o
+
+default: esPIC
+
+all: esPIC gen_ambient
+
+$(BIN):
+	@mkdir -p $(BIN)
+
+esPIC: $(TARGET)
+
+$(TARGET): $(BIN) $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LDLIBS)
+
+gen_ambient: $(GEN_AMBIENT)
+
+$(GEN_AMBIENT): $(BIN) gen_ambient.o
+	$(CXX) $(CXXFLAGS) gen_ambient.o -o $@ $(LDLIBS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $<
+
+clean:
+	/bin/rm -f *.o *.x .*.un~ $(TARGET) $(GEN_AMBIENT)
+
+run:
+	$(TARGET)

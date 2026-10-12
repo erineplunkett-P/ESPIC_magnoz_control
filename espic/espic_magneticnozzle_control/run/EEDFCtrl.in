@@ -1,0 +1,2 @@
+0 10 100           ! E_min, E_max, nbins 
+0 0 512 512         ! evaluation region: start_x, start_y, end_x, end_y 

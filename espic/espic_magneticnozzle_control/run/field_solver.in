@@ -1,0 +1,5 @@
+4         ! solver: 1-bicgstab, 4-lu
+1e-4      ! Convergence criteria for iterative Poisson's solver
+200       ! Maximum # of iterations of iterative Poisson's solver
+1e-8      ! Convergence criteria of Newton's iterations non-linear
+40        ! Maximum # of Newton's iterations of non-linear Poisson

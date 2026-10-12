@@ -1,0 +1,2 @@
+0 0 0 0 0 0             ! 1st in_out_flow boundary: 0-false, 1-true, (xlow, xhigh, ylow, yhigh, zlow, zhigh)
+1 1.0 0.025 8.0 0.0 0.0  ! 1st in_out_flow prop: spec_type, n, T, (U, V, W)

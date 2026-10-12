@@ -1,0 +1,6 @@
+0.0 256.0 0.0 256.0 0.0 0.0   ! domain size (x0, x1, y0, y1, z0, z1)
+1.0 1.0 1.0                   ! cell size (dx, dy dz)
+1 1 1 1 4 4                   ! field BC (xlow, xhigh, ylow, yhigh, zlow, zhigh): 1-Neumann, 2-Dirichlet, 4-periodic
+2 2 2 2 4 4                   ! part BC, electron
+1 1 2 1 4 4                   ! part BC (xlow, xhigh, ylow, yhigh, zlow, zhigh): 1-absorption, 2-reflect, 4-periodic
+0.0 0.0 0.0 0.0 0.0 0.0       ! fbcValue: Dirichlet -- phi_bc; Neumann -- value of d(phi)/dn = g
