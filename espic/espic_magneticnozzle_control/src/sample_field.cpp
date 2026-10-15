@@ -494,15 +494,19 @@ bool SampleField::read_sample(int step)
 
 void SampleField::write_sample()
 {
-    FILE *ofp;
-    ofp = fopen("esPIC.sample", "wb");
+    FILE *ofp = fopen("esPIC.sample", "wb");
+
+    if (ofp == NULL)
+    {
+        perror("Error opening esPIC.sample");
+        return;
+    }
 
     fwrite(&step_now, sizeof(int), 1, ofp);
     fwrite(&nsamples, sizeof(uint32_t), 1, ofp);
     fwrite(spfield, sizeof(Sample), nspec * nnodes, ofp);
 
     fclose(ofp);
-    return;
 }
 
 void SampleField::compute_moment_sum(Sample *ptrsp, double *v, double wgt)
