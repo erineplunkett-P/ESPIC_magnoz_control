@@ -1,4 +1,4 @@
 0    ! step_start: step after which starts sampling
 1        ! nevery_sample: make a sample every this step
-1000       ! nevery_write: write sampling info to file every this step
-1000      ! nevery_postproc: postproc field every this step
+1200       ! nevery_write: write sampling info to file every this step
+1300      ! nevery_postproc: postproc field every this step
