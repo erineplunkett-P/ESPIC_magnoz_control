@@ -4,8 +4,8 @@
 20000         ! endstep
 0             ! flag for hybrid simulations: 1 - hybrid, otherwise - full PIC
 323630        ! seed to rand(): use (1) current time if < 0; (2) default if = 0; (3) given value if > 0
-700         ! ivevalfield -- [if (== 0 || > ivdump): no eval nor dump]
-1400          ! ivdump -- [be multipe of iveval; if (< iveval***): no ***eval nor ***dump files]
+1000         ! ivevalfield -- [if (== 0 || > ivdump): no eval nor dump]
+1000          ! ivdump -- [be multipe of iveval; if (< iveval***): no ***eval nor ***dump files]
 100000000     ! ivdumpPart
 0             ! 1 if read restart file
 10000         ! ivrestart -- ( no restart if 0)
